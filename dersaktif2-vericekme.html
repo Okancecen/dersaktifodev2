@@ -27,8 +27,15 @@
 
                name.forEach(element => {
                     var liElement = document.createElement('li');
+                    if (element.unitPrice > 50)
+                    {
+                    liElement.style.color="red"
                     liElement.innerText = element.name + " - " + element.unitPrice;
-
+                    }
+                    else
+                    {
+                    liElement.innerText = element.name + " - " + element.unitPrice;
+                    }
                     document.querySelector('ul').appendChild(liElement);
                });
 
